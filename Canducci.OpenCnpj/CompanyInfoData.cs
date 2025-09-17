@@ -4,6 +4,65 @@ namespace Canducci.OpenCnpj
 {
     public class CompanyInfoData
     {
+        [JsonConstructor]
+        public CompanyInfoData
+        (
+            string cnpj, 
+            string corporateName, 
+            string tradeName, 
+            string registrationStatus, 
+            string registrationStatusDate, 
+            string headquartersOrBranch, 
+            string activityStartDate, 
+            string mainCnae, 
+            List<string> secondaryCnaes, 
+            string legalNature, 
+            string street, 
+            string number, 
+            string addressComplement, 
+            string neighborhood, 
+            string zipCode, 
+            string state, 
+            string city, 
+            string email, 
+            List<Phone> phones, 
+            string shareCapital, 
+            string companySize, 
+            string simpleOption, 
+            string simpleOptionDate, 
+            string meiOption, 
+            string meiOptionDate, 
+            List<Shareholder> shareholders
+        )
+        {
+            Cnpj = cnpj;
+            CorporateName = corporateName;
+            TradeName = tradeName;
+            RegistrationStatus = registrationStatus;
+            RegistrationStatusDate = registrationStatusDate;
+            HeadquartersOrBranch = headquartersOrBranch;
+            ActivityStartDate = activityStartDate;
+            MainCnae = mainCnae;
+            SecondaryCnaes = secondaryCnaes;
+            LegalNature = legalNature;
+            Street = street;
+            Number = number;
+            AddressComplement = addressComplement;
+            Neighborhood = neighborhood;
+            ZipCode = zipCode;
+            State = state;
+            City = city;
+            Email = email;
+            Phones = phones;
+            ShareCapital = shareCapital;
+            CompanySize = companySize;
+            SimpleOption = simpleOption;
+            SimpleOptionDate = simpleOptionDate;
+            MeiOption = meiOption;
+            MeiOptionDate = meiOptionDate;
+            Shareholders = shareholders;
+        }
+
         [JsonPropertyName("cnpj")]
         public string Cnpj { get; private set; }
 
@@ -83,4 +142,3 @@ namespace Canducci.OpenCnpj
         public List<Shareholder> Shareholders { get; private set; }
     }
 }
-
