@@ -67,7 +67,11 @@ services.AddOpenZip();
 ### Controller
 
 ```csharp
-public async Task<ActionResult> GetCnpj([FromService]ICompanyInfoRequest companyInfoRequest, string cnpj)
+public async Task<ActionResult> GetCnpj
+(
+   [FromService]ICompanyInfoRequest companyInfoRequest, 
+   string cnpj
+)
 {
    CompanyInfoResult? result = await companyInfoRequest.GetCnpjAsync(cnpj);
    if (result.IsValid)
