@@ -19,7 +19,7 @@ namespace Canducci.OpenCnpjTest
         [Test]
         public async Task TestCnpjOkAsync()
         {
-            CompanyInfoResult? result = await CompanyInfoRequest.GetCnpjAsync("09.645.389/0001-05");
+            CompanyInfoResult? result = await CompanyInfoRequest.GetCnpjAsync("13990624000145");
             Assert.IsTrue(result.IsValid);
         }
 
