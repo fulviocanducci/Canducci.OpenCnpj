@@ -44,6 +44,5 @@ namespace Canducci.OpenCnpj
             return cnpj.EndsWith(checkDigits);
         }
     }
-
 }
 

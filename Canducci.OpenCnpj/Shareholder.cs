@@ -1,9 +1,19 @@
 ﻿using System.Text.Json.Serialization;
-
 namespace Canducci.OpenCnpj
 {
     public class Shareholder
     {
+        [JsonConstructor]
+        public Shareholder(string partnerName, string partnerDocument, string partnerQualification, string entryDate, string partnerType, string ageRange)
+        {
+            PartnerName = partnerName;
+            PartnerDocument = partnerDocument;
+            PartnerQualification = partnerQualification;
+            EntryDate = entryDate;
+            PartnerType = partnerType;
+            AgeRange = ageRange;
+        }
+
         [JsonPropertyName("nome_socio")]
         public string PartnerName { get; private set; }
 
