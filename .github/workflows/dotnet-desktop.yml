@@ -1,0 +1,28 @@
+name: Canducci.OpenZip
+
+on:
+  workflow_dispatch:
+  release:
+    types: [created]
+
+jobs:
+  build-test-pack-publish:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.x'
+
+      - name: Restaurar dependências
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Testes
+        run: dotnet test --configuration Release --no-build
