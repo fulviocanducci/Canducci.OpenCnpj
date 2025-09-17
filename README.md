@@ -1,5 +1,8 @@
 # Canducci.OpenCnpj
 
+[![Version](https://img.shields.io/nuget/v/Canducci.OpenCnpj.svg?style=plastic&label=version)](https://www.nuget.org/packages/Canducci.OpenCnpj/) [![NuGet](https://img.shields.io/nuget/dt/Canducci.OpenCnpj.svg)](https://www.nuget.org/packages/Canducci.OpenCnpj/)
+[![Canducci.OpenZip](https://github.com/fulviocanducci/Canducci.OpenCnpj/actions/workflows/dotnet-desktop.yml/badge.svg)](https://github.com/fulviocanducci/Canducci.OpenCnpj/actions/workflows/dotnet-desktop.yml)
+
 ## Code In-line
 
 ### namespace 
